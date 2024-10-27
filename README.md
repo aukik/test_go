@@ -52,7 +52,7 @@ Clean up binary from the last build:
 make clean
 ```
 
-### Ideal File Tree Structure with SQLC
+### Ideal File Tree Structure with SQLC and Fiber
 .
 ├── Makefile
 ├── README.md
