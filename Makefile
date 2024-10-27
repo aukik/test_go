@@ -5,8 +5,8 @@ all: build test
 
 build:
 	@echo "Building..."
-	
-	
+
+
 	@go build -o main cmd/api/main.go
 
 # Run the application
@@ -30,6 +30,9 @@ docker-down:
 		docker-compose down; \
 	fi
 
+# Generate SQLC
+sqlc:
+	sqlc generate
 # Test the application
 test:
 	@echo "Testing..."
@@ -61,4 +64,4 @@ watch:
             fi; \
         fi
 
-.PHONY: all build run test clean watch docker-run docker-down itest
+.PHONY: all build run test clean watch docker-run docker-down itest sqlc
